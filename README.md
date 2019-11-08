@@ -1,8 +1,16 @@
 # 使用 [Taro](https://taro.aotu.io) 开发微信小程序
 
-记录使用 [Taro](https://taro.aotu.io) 开发小程序的过程，小程序前端模仿 [CanisMinor 小程序](https://github.com/canisminor1990/canisminor-wxapp) 。小程序中部分图片资源来自 [CanisMinor 小程序](https://github.com/canisminor1990/canisminor-wxapp) ，版权由原作者所有。
+记录使用 [Taro](https://taro.aotu.io) 、 TypeScript 开发微信小程序的过程，前端使用 Taro 框架，后端使用 GraphQL。
+
+前端 UI 模仿 [CanisMinor 小程序](https://github.com/canisminor1990/canisminor-wxapp) 。小程序中部分图片资源来自 [CanisMinor 小程序](https://github.com/canisminor1990/canisminor-wxapp) ，版权由原作者所有。
 
 ## Day 1
+
+### 开发环境搭建
+
+- [安装Taro](https://taro.aotu.io)
+- 安装微信开发者工具
+- 安装代码编辑器，推荐使用 VS Code。
 
 ### 新建 Taro 项目
 
@@ -20,7 +28,7 @@ $ taro init
 
  <img src="https://i.loli.net/2019/11/08/57QZrOkMgAiz9Kt.png" width = "200px" alt="taro-hello-world.png" align=center />
 
-#### 设置 TabBar
+### 设置 TabBar
 
  <img src="https://i.loli.net/2019/11/08/6g8uWYiTM3qbwxO.png" width = "200px" alt="taro-hello-world.png" align=center />
 
