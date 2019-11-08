@@ -30,10 +30,12 @@ $ taro init
 
 ### 设置 TabBar
 
+下载 tabBar icons 到 `src/asset/tabbar` 目录，修改 `src/app.tsx`
+
  <img src="https://i.loli.net/2019/11/08/6g8uWYiTM3qbwxO.png" width = "200px" alt="taro-hello-world.png" align=center />
 
 ```ts
-// src/app.ts
+// src/app.tsx
   config: Config = {
     tabBar: {
       color: '#c1c1c1',
