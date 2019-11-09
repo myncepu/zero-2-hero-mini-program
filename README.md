@@ -18,11 +18,11 @@ $ taro init
 
 运行 `yarn dev:weapp`，会在根目录下生成 dist 文件夹，使用微信开发者工具导入项目，选择项目根目录进行预览（见下图）。
 
- <img src="https://i.loli.net/2019/11/08/57QZrOkMgAiz9Kt.png" width = "200px" alt="taro-hello-world.png" align=center />
+ <img src="https://person-blog-1255441669.cos.ap-beijing.myqcloud.com/images/20191109131544.png" width = "200px" alt="taro-hello-world.png" align=center />
 
 #### 设置 TabBar
 
- <img src="https://i.loli.net/2019/11/08/6g8uWYiTM3qbwxO.png" width = "200px" alt="taro-hello-world.png" align=center />
+ <img src="https://person-blog-1255441669.cos.ap-beijing.myqcloud.com/images/20191109131633.png" width = "200px" alt="taro-hello-world.png" align=center />
 
 ```ts
 // src/app.ts
