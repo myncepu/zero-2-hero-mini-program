@@ -4,11 +4,13 @@
 
 前端 UI 模仿 [CanisMinor 小程序](https://github.com/canisminor1990/canisminor-wxapp) 。小程序中部分图片资源来自 [CanisMinor 小程序](https://github.com/canisminor1990/canisminor-wxapp) ，版权由原作者所有。
 
+ <img src="https://person-blog-1255441669.cos.ap-beijing.myqcloud.com/images/20191109134307.gif" width = "200px" alt="taro-hello-world.png" align=center />
+
 ## Day 1
 
 ### 开发环境搭建
 
-- [安装Taro](https://taro.aotu.io)
+- [安装 Taro](https://taro.aotu.io)
 - 安装微信开发者工具
 - 安装代码编辑器，推荐使用 VS Code。
 
@@ -56,4 +58,10 @@ $ taro init
   }
 ```
 
-[CURRENT CODE](https://github.com/myncepu/zero-2-hero-mini-program/tree/b113329041b92304b60ce1c3a808d77edf0614f0)
+[当前代码](https://github.com/myncepu/zero-2-hero-mini-program/tree/b113329041b92304b60ce1c3a808d77edf0614f0)
+
+### 总结
+
+第一天，新建 Taro 项目，设置 TabBar。效果图如下：
+
+ <img src="https://person-blog-1255441669.cos.ap-beijing.myqcloud.com/images/20191109135531.gif" width = "200px" alt="taro-hello-world.png" align=center />
