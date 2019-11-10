@@ -4,7 +4,7 @@
 
 前端 UI 模仿 [CanisMinor 小程序](https://github.com/canisminor1990/canisminor-wxapp) 。小程序中部分图片资源来自 [CanisMinor 小程序](https://github.com/canisminor1990/canisminor-wxapp) ，版权由原作者所有。
 
- <img src="https://person-blog-1255441669.cos.ap-beijing.myqcloud.com/images/20191109134307.gif" width = "200px" alt="taro-hello-world.png" align=center />
+ <img src="https://person-blog-1255441669.cos.ap-beijing.myqcloud.com/images/20191109151922.gif" width = "200px" alt="taro-hello-world.png" align=center />
 
 ## Day 1
 
