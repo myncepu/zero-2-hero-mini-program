@@ -99,11 +99,6 @@ export default class Index extends Component<IndexProps, IndexState> {
               </SwiperItem>
             ))}
           </Swiper>
-          <View className="cover" hoverClass="cover-hover">
-            <View className="mask" />
-            <View className="split" />
-            <View className="num">01</View>
-          </View>
           <Card title="项目" btn="查看项目" padding tab>
             <Design
               data={[
