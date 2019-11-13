@@ -1,0 +1,74 @@
+$animation-time: 0.3s;
+$cover-height: 4rem;
+
+.cover {
+  width: 100%;
+  height: $cover-height;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  filter: grayscale(100%);
+  transition: all $animation-time ease-in-out;
+  position: relative;
+  overflow: hidden;
+  .mask {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all $animation-time ease-in-out;
+    z-index: 0;
+  }
+  .split {
+    height: 2px;
+    background: #222;
+    width: 1rem;
+    z-index: 1;
+    margin-right: 2rem;
+    transition: all $animation-time ease-in-out;
+  }
+  .num {
+    transition: all $animation-time ease-in-out;
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 1.6rem;
+    line-height: $cover-height;
+    font-size: 0.6rem;
+  }
+  .content {
+    padding: 1rem 0;
+
+    transition: all $animation-time ease-in-out;
+    z-index: 1;
+  }
+  .title {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+  }
+  .type {
+    font-size: 0.6rem;
+  }
+}
+.cover-hover {
+  filter: grayscale(0%);
+  .content {
+    color: #fff;
+  }
+  .split {
+    background: #fff;
+    width: 2.5rem;
+    margin-right: 1rem;
+  }
+  .num {
+    opacity: 0;
+  }
+  .mask {
+    transform: translate3d(100%, 0, 0);
+  }
+}
