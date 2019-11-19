@@ -19,7 +19,7 @@ class App extends Component {
    */
   config: Config = {
     pages: [
-      "pages/index/index",
+      "pages/hello/index",
       "pages/project/index",
       "pages/blog/index",
       "pages/me/index"
@@ -31,7 +31,7 @@ class App extends Component {
       backgroundColor: "#fff",
       list: [
         {
-          pagePath: "pages/index/index",
+          pagePath: "pages/hello/index",
           text: "Hello",
           iconPath: "./asset/tabbar/hola.png",
           selectedIconPath: "./asset/tabbar/hola-active.png"
