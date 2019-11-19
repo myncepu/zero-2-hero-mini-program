@@ -32,6 +32,7 @@ type IndexState = {
     description: string;
     type: string;
     cover: string;
+    href: string;
   }[];
   articleData: {
     title: string;
@@ -121,9 +122,10 @@ export default class Index extends Component<IndexProps, IndexState> {
       ],
       codingData: [
         {
-          title: "AUTO",
-          description: "Sketch tools",
+          title: "ZERO TO HERO MINI PROGRAM",
+          description: "Taro mini program",
           type: "sketch",
+          href: "https://github.com/myncepu/zero-2-hero-mini-program",
           cover:
             "https://person-blog-1255441669.cos.ap-beijing.myqcloud.com/images/20191118160529.png"
         },
@@ -131,6 +133,7 @@ export default class Index extends Component<IndexProps, IndexState> {
           title: "Chrome extension",
           description: "Chrome automation",
           type: "chrome",
+          href: "https://github.com/myncepu/zero-2-hero-mini-program",
           cover:
             "https://person-blog-1255441669.cos.ap-beijing.myqcloud.com/images/20191118160529.png"
         }
@@ -191,7 +194,11 @@ export default class Index extends Component<IndexProps, IndexState> {
               </SwiperItem>
             ))}
           </Swiper>
-          <Card title="自我介绍" btn="查看" padding>
+          <Card title="Coding" btn="查看我的代码仓库" tab>
+            <Coding data={codingData} />
+          </Card>
+          <WhiteSpace />
+          <Card title="自我介绍" btn="查看" padding tab to="/pages/me/index">
             <Intro
               skills={intro.skills}
               title={intro.title}
@@ -199,16 +206,12 @@ export default class Index extends Component<IndexProps, IndexState> {
             />
           </Card>
           <WhiteSpace />
-          <Card title="项目" btn="查看项目" tab>
+          <Card title="项目" btn="查看项目" tab to="/pages/project/index">
             <Design data={designData} />
           </Card>
           <WhiteSpace />
-          <Card title="文章" btn="查看我的 Blog" tab>
+          <Card title="文章" btn="查看我的 Blog" tab to="/pages/blog/index">
             <Article data={articleData} />
-          </Card>
-          <WhiteSpace />
-          <Card title="Coding" btn="查看我的代码仓库" tab>
-            <Coding data={codingData} />
           </Card>
           <WhiteSpace />
         </View>
