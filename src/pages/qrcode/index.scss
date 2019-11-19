@@ -1,0 +1,29 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+
+  .image {
+    width: 60%;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+    text-align: center;
+
+    .title {
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .url {
+      font-size: 0.8rem;
+    }
+  }
+}

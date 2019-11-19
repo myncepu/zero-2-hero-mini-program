@@ -1,5 +1,5 @@
 import Taro, { Component, Config } from "@tarojs/taro";
-import Index from "./pages/index";
+import Index from "./pages/hello/index";
 
 import "./app.scss";
 
@@ -22,7 +22,8 @@ class App extends Component {
       "pages/hello/index",
       "pages/project/index",
       "pages/blog/index",
-      "pages/me/index"
+      "pages/me/index",
+      "pages/qrcode/index"
     ],
     tabBar: {
       color: "#c1c1c1",
