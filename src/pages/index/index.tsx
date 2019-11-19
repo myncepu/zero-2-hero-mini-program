@@ -4,6 +4,8 @@ import { Swiper, SwiperItem, View, Image } from "@tarojs/components";
 import { Card, WhiteSpace } from "../../components";
 import Intro from "./Intro";
 import Design from "./Design";
+import Coding from "./Coding";
+import Article from "./Article";
 
 import "./index.scss";
 
@@ -19,7 +21,27 @@ type IndexState = {
     title: string;
     description: string;
   };
+  designData: {
+    title: string;
+    type: string;
+    cover: string;
+    to: string;
+  }[];
+  codingData: {
+    title: string;
+    description: string;
+    type: string;
+    cover: string;
+  }[];
+  articleData: {
+    title: string;
+    description: string;
+    type: string;
+    cover: string;
+    date: Date;
+  }[];
 };
+
 export default class Index extends Component<IndexProps, IndexState> {
   /**
    * 指定config的类型声明为: Taro.Config
@@ -66,7 +88,71 @@ export default class Index extends Component<IndexProps, IndexState> {
               "https://person-blog-1255441669.cos.ap-beijing.myqcloud.com/images/20191110223458.png"
           }
         ]
-      }
+      },
+      designData: [
+        {
+          title: "项目1",
+          type: "Code",
+          cover:
+            "https://person-blog-1255441669.cos.ap-beijing.myqcloud.com/images/20191110231920.jpg",
+          to: ""
+        },
+        {
+          title: "项目2",
+          type: "Code",
+          cover:
+            "https://person-blog-1255441669.cos.ap-beijing.myqcloud.com/images/20191110231920.jpg",
+          to: ""
+        },
+        {
+          title: "项目3",
+          type: "Code",
+          cover:
+            "https://person-blog-1255441669.cos.ap-beijing.myqcloud.com/images/20191110231920.jpg",
+          to: ""
+        },
+        {
+          title: "项目4",
+          type: "Code",
+          cover: "",
+          to:
+            "https://person-blog-1255441669.cos.ap-beijing.myqcloud.com/images/20191113081949.png"
+        }
+      ],
+      codingData: [
+        {
+          title: "AUTO",
+          description: "Sketch tools",
+          type: "sketch",
+          cover:
+            "https://person-blog-1255441669.cos.ap-beijing.myqcloud.com/images/20191118160529.png"
+        },
+        {
+          title: "Chrome extension",
+          description: "Chrome automation",
+          type: "chrome",
+          cover:
+            "https://person-blog-1255441669.cos.ap-beijing.myqcloud.com/images/20191118160529.png"
+        }
+      ],
+      articleData: [
+        {
+          title: "AUTO",
+          description: "Sketch tools",
+          type: "sketch",
+          cover:
+            "https://person-blog-1255441669.cos.ap-beijing.myqcloud.com/images/20191118160529.png",
+          date: new Date("2019-11-17")
+        },
+        {
+          title: "Chrome extension",
+          description: "Chrome automation",
+          type: "chrome",
+          cover:
+            "https://person-blog-1255441669.cos.ap-beijing.myqcloud.com/images/20191118160529.png",
+          date: new Date("2019-11-18")
+        }
+      ]
     };
   }
 
@@ -81,7 +167,13 @@ export default class Index extends Component<IndexProps, IndexState> {
   componentDidHide() {}
 
   render() {
-    const { SwiperImagesUrls, intro } = this.state;
+    const {
+      SwiperImagesUrls,
+      intro,
+      designData,
+      codingData,
+      articleData
+    } = this.state;
 
     return (
       <View className="page">
@@ -99,48 +191,26 @@ export default class Index extends Component<IndexProps, IndexState> {
               </SwiperItem>
             ))}
           </Swiper>
-          <Card title="项目" btn="查看项目" padding tab>
-            <Design
-              data={[
-                {
-                  title: "项目1",
-                  type: "Code",
-                  cover:
-                    "https://person-blog-1255441669.cos.ap-beijing.myqcloud.com/images/20191110231920.jpg",
-                  to: ""
-                },
-                {
-                  title: "项目2",
-                  type: "Code",
-                  cover:
-                    "https://person-blog-1255441669.cos.ap-beijing.myqcloud.com/images/20191110231920.jpg",
-                  to: ""
-                },
-                {
-                  title: "项目3",
-                  type: "Code",
-                  cover:
-                    "https://person-blog-1255441669.cos.ap-beijing.myqcloud.com/images/20191110231920.jpg",
-                  to: ""
-                },
-                {
-                  title: "项目4",
-                  type: "Code",
-                  cover: "",
-                  to:
-                    "https://person-blog-1255441669.cos.ap-beijing.myqcloud.com/images/20191113081949.png"
-                }
-              ]}
-            />
-          </Card>
-          <WhiteSpace />
-          <Card title="提高效率的方法" btn="查看" padding>
+          <Card title="自我介绍" btn="查看" padding>
             <Intro
               skills={intro.skills}
               title={intro.title}
               description={intro.description}
             />
           </Card>
+          <WhiteSpace />
+          <Card title="项目" btn="查看项目" tab>
+            <Design data={designData} />
+          </Card>
+          <WhiteSpace />
+          <Card title="文章" btn="查看我的 Blog" tab>
+            <Article data={articleData} />
+          </Card>
+          <WhiteSpace />
+          <Card title="Coding" btn="查看我的代码仓库" tab>
+            <Coding data={codingData} />
+          </Card>
+          <WhiteSpace />
         </View>
       </View>
     );

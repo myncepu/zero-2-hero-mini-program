@@ -1,7 +1,7 @@
-import Taro, { Component, Config } from '@tarojs/taro'
-import Index from './pages/index'
+import Taro, { Component, Config } from "@tarojs/taro";
+import Index from "./pages/index";
 
-import './app.scss'
+import "./app.scss";
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -18,46 +18,46 @@ class App extends Component {
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
   config: Config = {
-    pages: ['pages/index/index'],
+    pages: ["pages/project/index", "pages/index/index", "pages/blog/index"],
     tabBar: {
-      color: '#c1c1c1',
-      selectedColor: '#222',
-      // borderStyle: 'white',
-      backgroundColor: '#fff',
+      color: "#c1c1c1",
+      selectedColor: "#222",
+      borderStyle: "white",
+      backgroundColor: "#fff",
       list: [
         {
-          pagePath: 'pages/index/index',
-          text: 'Hello',
-          iconPath: './asset/tabbar/hola.png',
-          selectedIconPath: './asset/tabbar/hola-active.png',
+          pagePath: "pages/project/index",
+          text: "Project",
+          iconPath: "./asset/tabbar/projects.png",
+          selectedIconPath: "./asset/tabbar/projects-active.png"
         },
         {
-          pagePath: 'pages/index/index',
-          text: 'Blog',
-          iconPath: './asset/tabbar/blog.png',
-          selectedIconPath: './asset/tabbar/blog-active.png',
+          pagePath: "pages/blog/index",
+          text: "Blog",
+          iconPath: "./asset/tabbar/blog.png",
+          selectedIconPath: "./asset/tabbar/blog-active.png"
         },
         {
-          pagePath: 'pages/index/index',
-          text: 'Project',
-          iconPath: './asset/tabbar/projects.png',
-          selectedIconPath: './asset/tabbar/projects-active.png',
+          pagePath: "pages/index/index",
+          text: "Hello",
+          iconPath: "./asset/tabbar/hola.png",
+          selectedIconPath: "./asset/tabbar/hola-active.png"
         },
         {
-          pagePath: 'pages/index/index',
-          text: 'Me',
-          iconPath: './asset/tabbar/resume.png',
-          selectedIconPath: './asset/tabbar/resume-active.png',
-        },
-      ],
+          pagePath: "pages/index/index",
+          text: "Me",
+          iconPath: "./asset/tabbar/resume.png",
+          selectedIconPath: "./asset/tabbar/resume-active.png"
+        }
+      ]
     },
     window: {
-      backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
-      navigationBarTextStyle: 'black',
-    },
-  }
+      backgroundTextStyle: "light",
+      navigationBarBackgroundColor: "#fff",
+      navigationBarTitleText: "WeChat",
+      navigationBarTextStyle: "black"
+    }
+  };
 
   componentDidMount() {}
 
@@ -70,8 +70,8 @@ class App extends Component {
   // 在 App 类中的 render() 函数没有实际作用
   // 请勿修改此函数
   render() {
-    return <Index />
+    return <Index />;
   }
 }
 
-Taro.render(<App />, document.getElementById('app'))
+Taro.render(<App />, document.getElementById("app"));

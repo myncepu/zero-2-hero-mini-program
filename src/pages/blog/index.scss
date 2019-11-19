@@ -1,0 +1,36 @@
+.post {
+  padding: 1rem;
+
+  .text {
+    margin-bottom: 0.5rem;
+
+    .first-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      line-height: 2;
+
+      .title {
+        font-weight: bold;
+      }
+
+      .date {
+        color: #777;
+        font-size: 0.7rem;
+      }
+
+      .description {
+        font-size: 0.6rem;
+      }
+    }
+  }
+
+  .image {
+    width: 100%;
+    height: 10rem;
+  }
+}
+
+.post-hover {
+  background: #f8f8f8;
+}
