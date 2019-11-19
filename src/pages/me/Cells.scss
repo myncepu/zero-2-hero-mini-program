@@ -1,0 +1,46 @@
+.cells {
+  width: 100vw;
+  background: white;
+
+  .cell {
+    width: 100vw;
+    height: 3.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: hidden;
+
+    .icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 1rem;
+      margin-left: 1rem;
+    }
+
+    .title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1;
+      height: 3rem;
+      border-bottom: 3px solid #eee;
+
+      .right {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+
+    &:last-child {
+      .title {
+        border-bottom: none;
+      }
+    }
+
+  }
+}
+
+.cell-hover {
+  background: #f8f8f8;
+}

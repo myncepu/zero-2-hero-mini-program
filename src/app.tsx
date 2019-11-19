@@ -18,13 +18,24 @@ class App extends Component {
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
   config: Config = {
-    pages: ["pages/project/index", "pages/index/index", "pages/blog/index"],
+    pages: [
+      "pages/index/index",
+      "pages/project/index",
+      "pages/blog/index",
+      "pages/me/index"
+    ],
     tabBar: {
       color: "#c1c1c1",
       selectedColor: "#222",
       borderStyle: "white",
       backgroundColor: "#fff",
       list: [
+        {
+          pagePath: "pages/index/index",
+          text: "Hello",
+          iconPath: "./asset/tabbar/hola.png",
+          selectedIconPath: "./asset/tabbar/hola-active.png"
+        },
         {
           pagePath: "pages/project/index",
           text: "Project",
@@ -38,13 +49,7 @@ class App extends Component {
           selectedIconPath: "./asset/tabbar/blog-active.png"
         },
         {
-          pagePath: "pages/index/index",
-          text: "Hello",
-          iconPath: "./asset/tabbar/hola.png",
-          selectedIconPath: "./asset/tabbar/hola-active.png"
-        },
-        {
-          pagePath: "pages/index/index",
+          pagePath: "pages/me/index",
           text: "Me",
           iconPath: "./asset/tabbar/resume.png",
           selectedIconPath: "./asset/tabbar/resume-active.png"

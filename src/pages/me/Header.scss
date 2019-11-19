@@ -1,0 +1,56 @@
+$avatar-size: 3rem;
+
+.header {
+  padding: 1rem;
+  background-color: white;
+
+  .basic-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 1rem;
+
+    .avatar {
+      width: $avatar-size;
+      height: $avatar-size;
+      border-radius: $avatar-size / 2;
+      margin-right: 1rem;
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+
+      .name {
+        font-weight: bold;
+        line-height: 1.5rem;
+      }
+
+      .description {
+        font-size: 0.6rem;
+      }
+    }
+  }
+
+  .other-info-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .other-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .value {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+
+      .unit {
+        font-size: 0.6em;
+        font-weight: 300;
+      }
+    }
+  }
+}
