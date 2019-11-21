@@ -28,11 +28,20 @@ const config = {
   },
   copy: {
     patterns: [
+      {
+        from: 'src/wemark',
+        to: 'dist/wemark',
+      },
     ],
     options: {
     }
   },
   weapp: {
+    compile: {
+      exclude: [
+        'src/wemark/remarkable.js',
+      ]
+    },
     module: {
       postcss: {
         autoprefixer: {
@@ -68,6 +77,7 @@ const config = {
     }
   },
   h5: {
+    esnextModules: ['taro-ui'],
     publicPath: '/',
     staticDirectory: 'static',
     module: {
