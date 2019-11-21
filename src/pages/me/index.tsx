@@ -1,8 +1,7 @@
 import Taro, { Component, Config } from "@tarojs/taro";
-import { View, Image, Text } from "@tarojs/components";
-import moment from "moment";
+import { View } from "@tarojs/components";
 
-import { Card, WhiteSpace } from "../../components";
+import { WhiteSpace } from "../../components";
 import Header from "./Header";
 import Cells from "./Cells";
 
@@ -71,7 +70,11 @@ export default class Me extends Component<MeProps, MeState> {
         <WhiteSpace />
         <Cells
           data={[
-            { icon: require("./icon/cell-about.png"), title: "About Me" },
+            {
+              icon: require("./icon/cell-about.png"),
+              title: "About Me",
+              to: "/pages/me/about"
+            },
             { icon: require("./icon/cell-education.png"), title: "Education" },
             {
               icon: require("./icon/cell-experience.png"),

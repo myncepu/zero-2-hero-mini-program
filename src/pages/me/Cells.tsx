@@ -7,12 +7,19 @@ export type HeaderProps = {
   data: {
     icon: string;
     title: string;
+    to?: string;
   }[];
 };
 
 export default class extends Component<HeaderProps> {
   static defaultProps: HeaderProps = {
-    data: [{ icon: "", title: "" }]
+    data: [{ icon: "", title: "", to: "" }]
+  };
+
+  navigateTo = (url?: string) => {
+    if (url !== undefined) {
+      Taro.navigateTo({ url });
+    }
   };
 
   render() {
@@ -20,7 +27,12 @@ export default class extends Component<HeaderProps> {
     return (
       <View className="cells">
         {data.map((cell, idx) => (
-          <View key={idx} className="cell" hoverClass="cell-hover">
+          <View
+            key={idx}
+            className="cell"
+            hoverClass="cell-hover"
+            onClick={() => this.navigateTo(cell.to)}
+          >
             <Image className="icon" src={cell.icon} />
             <View className="title">
               {cell.title}
