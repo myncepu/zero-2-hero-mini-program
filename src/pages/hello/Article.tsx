@@ -12,16 +12,27 @@ type ArticleProps = {
     type: string;
     cover: string;
     date: Date;
+    url: string;
   }[];
 };
 
 export default class extends Component<ArticleProps> {
+  navigateTo(props) {
+    const url = `/pages/post/index?${props}`;
+    Taro.navigateTo({ url });
+  }
+
   render() {
     const { data } = this.props;
     return (
       <View className="article">
         {data.map((item, idx) => (
-          <View className="box" key={idx} hoverClass="box-hover">
+          <View
+            onClick={this.navigateTo.bind(this, item.url)}
+            key={idx}
+            className="box"
+            hoverClass="box-hover"
+          >
             <Image
               src={item.cover}
               style={{ width: "50px", height: "50px", borderRadius: "5px" }}
