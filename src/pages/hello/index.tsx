@@ -1,5 +1,6 @@
 import Taro, { Component, Config } from "@tarojs/taro";
 import { Swiper, SwiperItem, View, Image } from "@tarojs/components";
+import QueryString from "query-string";
 
 import { Card, WhiteSpace } from "../../components";
 import Intro from "./Intro";
@@ -40,6 +41,7 @@ type IndexState = {
     type: string;
     cover: string;
     date: Date;
+    url: string;
   }[];
 };
 
@@ -140,20 +142,26 @@ export default class Index extends Component<IndexProps, IndexState> {
       ],
       articleData: [
         {
-          title: "AUTO",
-          description: "Sketch tools",
-          type: "sketch",
+          title: "DAY 05 DEV NOTE",
+          description:
+            ":last-child 选择器、sass 父选择器 & 使用联图 API 生成二维码",
+          type: "Taro",
           cover:
             "https://person-blog-1255441669.cos.ap-beijing.myqcloud.com/images/20191118160529.png",
-          date: new Date("2019-11-17")
+          date: new Date("2019-11-17"),
+          url:
+            "https://raw.githubusercontent.com/myncepu/zero-2-hero-mini-program/master/docs/DAY-05.md"
         },
         {
-          title: "Chrome extension",
-          description: "Chrome automation",
-          type: "chrome",
+          title: "DAY 04 DEV NOTE",
+          description:
+            "CSS3 关键帧和其他组件 CSS3 keyframes and other components",
+          type: "Taro",
           cover:
             "https://person-blog-1255441669.cos.ap-beijing.myqcloud.com/images/20191118160529.png",
-          date: new Date("2019-11-18")
+          date: new Date("2019-11-18"),
+          url:
+            "https://raw.githubusercontent.com/myncepu/zero-2-hero-mini-program/master/docs/DAY-04.md"
         }
       ]
     };
@@ -178,6 +186,12 @@ export default class Index extends Component<IndexProps, IndexState> {
       articleData
     } = this.state;
 
+    const params = QueryString.stringify({
+      url: "https://github.com/myncepu",
+      title: "GITHUB: MYNCEPU"
+    });
+    const personalGithubPage = `/pages/qrcode/index?${params}`;
+
     return (
       <View className="page">
         <View className="example-item">
@@ -194,8 +208,17 @@ export default class Index extends Component<IndexProps, IndexState> {
               </SwiperItem>
             ))}
           </Swiper>
-          <Card title="Coding" btn="查看我的代码仓库" tab>
-            <Coding data={codingData} />
+          <Card title="文章" btn="查看我的 Blog" tab to="/pages/blog/index">
+            <Article data={articleData} />
+          </Card>
+          <WhiteSpace />
+          <Card
+            title="Design"
+            btn="View my design projects"
+            tab
+            to="/pages/project/index"
+          >
+            <Design data={designData} />
           </Card>
           <WhiteSpace />
           <Card title="自我介绍" btn="查看" padding tab to="/pages/me/index">
@@ -206,12 +229,8 @@ export default class Index extends Component<IndexProps, IndexState> {
             />
           </Card>
           <WhiteSpace />
-          <Card title="项目" btn="查看项目" tab to="/pages/project/index">
-            <Design data={designData} />
-          </Card>
-          <WhiteSpace />
-          <Card title="文章" btn="查看我的 Blog" tab to="/pages/blog/index">
-            <Article data={articleData} />
+          <Card title="Coding" btn="查看我的代码仓库" to={personalGithubPage}>
+            <Coding data={codingData} />
           </Card>
           <WhiteSpace />
         </View>
