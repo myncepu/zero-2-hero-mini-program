@@ -2,6 +2,7 @@ import Taro, { Component, Config } from "@tarojs/taro";
 import Index from "./pages/hello/index";
 
 import "./app.scss";
+import "taro-ui/dist/style/index.scss"; // 全局引入一次即可
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -23,7 +24,8 @@ class App extends Component {
       "pages/project/index",
       "pages/blog/index",
       "pages/me/index",
-      "pages/qrcode/index"
+      "pages/qrcode/index",
+      "pages/post/index"
     ],
     tabBar: {
       color: "#c1c1c1",
