@@ -15,6 +15,9 @@ type ProjectsProps = {
 };
 
 export default class extends Component<ProjectsProps> {
+  static defaultProps: ProjectsProps = {
+    data: [{ title: "", description: "", type: "", cover: "", href: "" }]
+  };
   navigateTo(props) {
     const url = `/pages/qrcode/index?${props}`;
     Taro.navigateTo({ url });

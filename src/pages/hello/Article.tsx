@@ -17,6 +17,18 @@ type ArticleProps = {
 };
 
 export default class extends Component<ArticleProps> {
+  static defaultProps: ArticleProps = {
+    data: [
+      {
+        title: "",
+        description: "",
+        type: "",
+        cover: "",
+        date: new Date(),
+        url: ""
+      }
+    ]
+  };
   navigateTo(props) {
     const url = `/pages/post/index?${props}`;
     Taro.navigateTo({ url });

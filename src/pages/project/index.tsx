@@ -1,8 +1,7 @@
 import Taro, { Component, Config } from "@tarojs/taro";
-import { View, Image, Text } from "@tarojs/components";
-import moment from "moment";
+import { View, Text } from "@tarojs/components";
 
-import { Card, WhiteSpace, Project } from "../../components";
+import { Project } from "../../components";
 
 import "./index.scss";
 
@@ -24,6 +23,7 @@ type IndexState = {
 };
 
 export default class Index extends Component<IndexProps, IndexState> {
+  static defaultProps: IndexProps = {};
   /**
    * 指定config的类型声明为: Taro.Config
    *

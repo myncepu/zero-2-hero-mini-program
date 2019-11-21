@@ -1,4 +1,4 @@
-import { View, Image, Text } from "@tarojs/components";
+import { View, Image } from "@tarojs/components";
 import Taro, { Component } from "@tarojs/taro";
 import _ from "lodash";
 import "./Cells.scss";
@@ -11,6 +11,10 @@ export type HeaderProps = {
 };
 
 export default class extends Component<HeaderProps> {
+  static defaultProps: HeaderProps = {
+    data: [{ icon: "", title: "" }]
+  };
+
   render() {
     const { data } = this.props;
     return (

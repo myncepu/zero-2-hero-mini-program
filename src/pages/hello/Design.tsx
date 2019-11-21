@@ -1,19 +1,22 @@
-import { View } from '@tarojs/components'
-import Taro, { Component } from '@tarojs/taro'
-import _ from 'lodash'
-import { Project } from '../../components'
-import './Design.scss'
+import { View } from "@tarojs/components";
+import Taro, { Component } from "@tarojs/taro";
+import _ from "lodash";
+import { Project } from "../../components";
+// import "./Design.scss";
 
 type ProjectsProps = {
   data: {
-    title: string
-    type: string
-    cover: string
-    to: string
-  }[]
-}
+    title: string;
+    type: string;
+    cover: string;
+    to: string;
+  }[];
+};
 
 export default class extends Component<ProjectsProps> {
+  static defaultProps: ProjectsProps = {
+    data: [{ title: "", type: "", cover: "", to: "" }]
+  };
   // navigateTo(filename) {
   //   filename = _.last(filename.split(/\//g))
   //   const url =
@@ -24,12 +27,12 @@ export default class extends Component<ProjectsProps> {
   // }
 
   render() {
-    const { data } = this.props
+    const { data } = this.props;
     return (
-      <View className='design'>
+      <View className="design">
         {data.map((item, i) => (
           <View
-            className='project'
+            className="project"
             key={item.title}
             // onClick={this.navigateTo.bind(this, item.to)}
           >
@@ -37,6 +40,6 @@ export default class extends Component<ProjectsProps> {
           </View>
         ))}
       </View>
-    )
+    );
   }
 }

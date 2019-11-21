@@ -1,4 +1,4 @@
-import { View, Image, Text, PickerViewColumn } from "@tarojs/components";
+import { View, Image, Text } from "@tarojs/components";
 import Taro, { Component } from "@tarojs/taro";
 import _ from "lodash";
 import "./Header.scss";
@@ -14,6 +14,13 @@ export type HeaderProps = {
 };
 
 export default class extends Component<HeaderProps> {
+  static defaultProps: HeaderProps = {
+    avatar: "",
+    name: "",
+    description: "",
+    otherInfo: [{ value: "", unit: "" }]
+  };
+
   render() {
     const { avatar, name, description, otherInfo } = this.props;
     return (
