@@ -45,11 +45,7 @@ export default class extends Component<ArticleProps> {
             className="box"
             hoverClass="box-hover"
           >
-            <Image
-              src={item.cover}
-              style={{ width: "50px", height: "50px", borderRadius: "5px" }}
-              mode="aspectFill"
-            />
+            <Image src={item.cover} className="image" mode="aspectFill" />
             <View className="text">
               <Text className="title">{item.title}</Text>
               <Text className="description">{item.description}</Text>
