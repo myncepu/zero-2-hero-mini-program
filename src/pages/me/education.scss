@@ -1,0 +1,43 @@
+.page {
+  width: 100vw;
+  background-color: #eee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .image-wrapper {
+    padding: 5vw 15vw;
+    background-color: white;
+
+    .image {
+      width: 70vw;
+      margin-bottom: 0.8rem;
+    }
+
+  }
+
+  .showcase {
+    width: 100vw;
+    background-color: white;
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      line-height: 4;
+      border-bottom: 3px solid #eee;
+      padding: 0 1rem;
+
+      .key {
+        flex: 1;
+        font-size: 0.8rem;
+      }
+
+      .value {
+        flex: 3;
+        font-weight: bold;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

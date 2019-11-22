@@ -1,0 +1,35 @@
+.awards {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  .award {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 0.5rem;
+    line-height: 2rem;
+    font-size: 0.8rem;
+
+    .icon-wrapper {
+      width: 1rem;
+      height: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.5rem;
+      margin-right: 0.5rem;
+
+      .icon-circle {
+        width: 0.8rem;
+        height: 0.8rem;
+      }
+
+      .icon {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+}
