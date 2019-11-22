@@ -1,10 +1,7 @@
 import Taro, { Component, Config } from "@tarojs/taro";
 import { View, Image, Text } from "@tarojs/components";
-import moment from "moment";
 
-import { Card, WhiteSpace } from "../../components";
-import Header from "./Header";
-import Cells from "./Cells";
+import { Cell, WhiteSpace } from "../../components";
 
 import "./about.scss";
 
@@ -45,16 +42,16 @@ export default class Me extends Component<MeProps, MeState> {
   render() {
     const showcase = [
       {
-        key: "birth",
+        unit: "birth",
         value: "1990.07.04"
       },
       {
-        key: "e-mail",
+        unit: "e-mail",
         value: "yan@pengqiang.me"
       },
       {
-        key: "website",
-        value: "yanpengqiang.com"
+        unit: "website",
+        value: "pengqiang.me"
       }
     ];
     return (
@@ -73,10 +70,7 @@ export default class Me extends Component<MeProps, MeState> {
         <WhiteSpace />
         <View className="showcase">
           {showcase.map((item, idx) => (
-            <View className="row" key={idx}>
-              <Text className="key">{item.key.toUpperCase()}</Text>
-              <Text className="value">{item.value}</Text>
-            </View>
+            <Cell unit={item.unit.toUpperCase()} value={item.value} key={idx} />
           ))}
         </View>
       </View>
