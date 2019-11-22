@@ -1,0 +1,19 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: 4;
+  border-bottom: 3px solid #eee;
+  padding: 0 1rem;
+
+  .unit {
+    flex: 1;
+    font-size: 0.8rem;
+  }
+
+  .value {
+    flex: 3;
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+}
