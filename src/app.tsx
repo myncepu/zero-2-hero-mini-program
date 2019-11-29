@@ -27,6 +27,7 @@ class App extends Component {
       "pages/me/about",
       "pages/me/education",
       "pages/me/experience/index",
+      "pages/me/design/index",
       "pages/qrcode/index",
       "pages/post/index"
     ],
