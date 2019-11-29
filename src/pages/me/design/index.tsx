@@ -23,7 +23,7 @@ export default class Me extends Component<MeProps, MeState> {
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
   config: Config = {
-    navigationBarTitleText: "Experience"
+    navigationBarTitleText: "Design Skills"
   };
 
   constructor() {
