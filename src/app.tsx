@@ -20,12 +20,13 @@ class App extends Component {
    */
   config: Config = {
     pages: [
-      "pages/me/index",
-      "pages/me/about",
-      "pages/me/education",
       "pages/hello/index",
       "pages/project/index",
       "pages/blog/index",
+      "pages/me/index",
+      "pages/me/about",
+      "pages/me/education",
+      "pages/me/experience/index",
       "pages/qrcode/index",
       "pages/post/index"
     ],

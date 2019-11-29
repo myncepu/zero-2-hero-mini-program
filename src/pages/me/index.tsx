@@ -82,7 +82,8 @@ export default class Me extends Component<MeProps, MeState> {
             },
             {
               icon: require("./icon/cell-experience.png"),
-              title: "Experience"
+              title: "Experience",
+              to: "/pages/me/experience/index"
             },
             { icon: require("./icon/cell-design.png"), title: "Design Skills" },
             { icon: require("./icon/cell-fe.png"), title: "Front-End Skills" },
