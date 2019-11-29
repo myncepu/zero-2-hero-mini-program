@@ -1,0 +1,60 @@
+.page {
+  width: 100vw;
+  background-color: #f8f8f8;
+  min-height: 100vh;
+
+  .skills-wrapper {
+    background-color: white;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+    background-color: white;
+
+    .avatar {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 2.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .name {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .description {
+      text-align: justify;
+      width: 90vw;
+    }
+  }
+
+  .showcase {
+    width: 100vw;
+    background-color: white;
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      line-height: 4;
+      border-bottom: 3px solid white;
+      padding: 0 1rem;
+
+      .key {
+        flex: 1;
+        font-size: 0.8rem;
+      }
+
+      .value {
+        flex: 3;
+        font-weight: bold;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
