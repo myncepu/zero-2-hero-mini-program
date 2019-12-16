@@ -1,0 +1,19 @@
+.content {
+  padding: 0.5rem 0.5rem;
+
+  .image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .image {
+      width: 80vw;
+      margin: 2rem 0
+    }
+  }
+
+  .description {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+}

@@ -97,7 +97,8 @@ export default class Me extends Component<MeProps, MeState> {
             },
             {
               icon: require("./icon/cell-specialities.png"),
-              title: "Specialities"
+              title: "Specialities",
+              to: "/pages/me/specialities/index"
             },
             { icon: require("./icon/cell-contact.png"), title: "Contact" }
           ]}
