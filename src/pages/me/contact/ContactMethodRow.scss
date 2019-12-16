@@ -1,0 +1,16 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem 1rem;
+
+  .icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 1rem;
+  }
+
+  .text {
+    font-size: 0.9rem;
+  }
+}

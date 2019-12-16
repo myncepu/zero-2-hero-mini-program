@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .description {
+    font-size: 1rem;
+    text-align: center;
+
+    Text {
+      color: #aaa;
+      animation: blink 1s ease-in-out infinite;
+    }
+  }
+
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

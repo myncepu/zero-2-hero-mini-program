@@ -1,7 +1,7 @@
 import Taro, { Component, Config } from "@tarojs/taro";
 import { View, Text } from "@tarojs/components";
 
-import { Project } from "../../components";
+import { Project, Header } from "../../components";
 
 import "./index.scss";
 
@@ -101,13 +101,7 @@ export default class Index extends Component<IndexProps, IndexState> {
     const { designData } = this.state;
     return (
       <View className="page">
-        <View className="header">
-          <Text className="title">Project Story</Text>
-          <Text className="description">
-            I'm description
-            <Text>_</Text>
-          </Text>
-        </View>
+        <Header header="Project Story" description="I'm description" />
         <View className="design">
           {designData.map((item, i) => (
             <View

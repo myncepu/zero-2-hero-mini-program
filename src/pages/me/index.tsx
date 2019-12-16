@@ -100,7 +100,11 @@ export default class Me extends Component<MeProps, MeState> {
               title: "Specialities",
               to: "/pages/me/specialities/index"
             },
-            { icon: require("./icon/cell-contact.png"), title: "Contact" }
+            {
+              icon: require("./icon/cell-contact.png"),
+              title: "Contact",
+              to: "/pages/me/contact/index"
+            }
           ]}
         />
         {/* <WhiteSpace /> */}

@@ -30,6 +30,7 @@ class App extends Component {
       "pages/me/design/index",
       "pages/me/front-end-skills/index",
       "pages/me/specialities/index",
+      "pages/me/contact/index",
       "pages/qrcode/index",
       "pages/post/index"
     ],
